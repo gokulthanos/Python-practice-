@@ -1,0 +1,98 @@
+
+
+#1.	Write a Python program to print Even Numbers from 1 to 100.
+
+for i in range(2,101,2):
+    print(i)
+ 
+#2.	Write a python program to print Natural Numbers in Reverse Order. 
+ Ex:          100,99,98...1
+
+for i in range(100,0,-1):
+    print(i)
+
+#3.	Write a Python example to find Sum and Average of Natural Numbers  
+Ex: a=1 b=5  sum=1+2+3+4+5=15 avg=3.0
+
+a=int(input())
+b=int(input())
+c=0
+for i in range(a,b+1):
+    c+=i
+print(c/b)
+
+
+#4.	Write a Python program to check Vowel or Consonant   
+Ex: input="e" output: Vowel
+
+c=input(“Enter a single character:”)
+if c=="a" or c=="e" or c=="i" or c=="o" or c=="u":
+    print("vowels")
+else:
+    print("consonant")
+
+#5.	Write a Python program to print the multiplication table of a given number up to 10.
+Ex: input:5
+      Output:  5*1=5
+                    5*2=10
+                      .
+                                  .
+                                  .
+                               5*10=50
+                   num=int(input())
+                   for i in range(1,11):
+                             print(f"{num}*{i}={num*i}")
+
+#6.	Write a Python program to check Number Divisible by 5 and 11. 
+input : 55  output: True
+input : 33  output: False
+
+num=int(input())
+if num%5==0 and num%11==0:
+    print("True")
+else:
+    print("False")
+
+#7.	Write a Python program to find Square root of a Number
+input : 9 output: 3
+
+import math
+a=int(input())
+print(math.sqrt(a))
+
+
+#8.	Write a Python program to find factorial of a given number using a loop.
+Input:5 output:120 
+Explanation 5!=5*4*3*2*1=120
+
+a=int(input())
+c=1
+for i in range(a,0,-1):
+    c*=i
+print(c) 
+
+#9.	Write a Python program to count the number of even and odd numbers from 1 to N.
+
+a=int(input())
+c=0
+d=0
+for i in range(1,a+1):
+    if i%2==0:
+        c+=1
+   
+for i in range(10+1):       
+    if i%2!=0:
+        d+=1
+print("even:",c)
+print("odd:",d)
+
+#10.	Write a Python program to reverse the digits of a given number using arithmetic operators and loops.
+Input:1234     output:4321
+
+print("Hello World")
+a=int(input())
+b=str(a)
+v=len(b)
+for i in range (v-1,-1,-1):
+    print(b[i],end="")
+
