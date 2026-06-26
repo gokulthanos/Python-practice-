@@ -1,0 +1,127 @@
+
+#1. Count the number of words in a text file
+
+file = open("sample.txt", "r")
+text = file.read()
+words = text.split()
+print("Number of words:", len(words))
+file.close()
+
+#2. Create a class Vehicle with method start(). Override it in class Car
+class Vehicle:
+    def start(self):
+        print("Vehicle is starting")
+
+class Car(Vehicle):
+    def start(self):
+        print("Car is starting")
+
+v = Vehicle()
+c = Car()
+
+v.start()
+c.start()
+
+#3. Program with multiple except blocks (ValueError and ZeroDivisionError)
+
+try:
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+
+    print("Result:", a / b)
+
+except ValueError:
+    print("Please enter only integers.")
+
+except ZeroDivisionError:
+    print("Division by zero is not allowed.")
+
+#4. Raise a custom exception if marks are not between 0 and 100
+
+class InvalidMarksError(Exception):
+    pass
+
+marks = int(input("Enter marks: "))
+
+try:
+    if marks < 0 or marks > 100:
+        raise InvalidMarksError("Marks should be between 0 and 100.")
+    else:
+        print("Valid marks")
+
+except InvalidMarksError as e:
+    print(e)
+
+#5. Raise a custom exception if a user enters a negative number
+class NegativeNumberError(Exception):
+    pass
+
+num = int(input("Enter a number: "))
+
+try:
+    if num < 0:
+        raise NegativeNumberError("Negative numbers are not allowed.")
+    else:
+        print("You entered:", num)
+
+except NegativeNumberError as e:
+    print(e)
+
+#6. Create a class Shape with method area(). Override it in Rectangle and Circle
+class Shape:
+    def area(self):
+        print("Area of shape")
+
+class Rectangle(Shape):
+    def area(self):
+        length = float(input("Enter length: "))
+        breadth = float(input("Enter breadth: "))
+        print("Area of Rectangle:", length * breadth)
+
+class Circle(Shape):
+    def area(self):
+        radius = float(input("Enter radius: "))
+        print("Area of Circle:", 3.14 * radius * radius)
+
+r = Rectangle()
+c = Circle()
+
+r.area()
+c.area()
+
+#7. Count the number of vowels in a text file
+file = open("sample.txt", "r")
+
+text = file.read().lower()
+
+count = 0
+
+for ch in text:
+    if ch in "aeiou":
+        count += 1
+
+print("Number of vowels:", count)
+
+file.close()
+
+#8. Write student details into a text file from a CSV file
+Example students.csv:
+Name,Age,Department
+Arun,20,CSE
+Priya,19,IT
+Rahul,21,ECE
+Python Code:
+import csv
+
+csv_file = open("students.csv", "r")
+text_file = open("students.txt", "w")
+
+reader = csv.reader(csv_file)
+
+for row in reader:
+    text_file.write(" | ".join(row) + "\n")
+
+csv_file.close()
+text_file.close()
+
+print("Student details copied to students.txt")
