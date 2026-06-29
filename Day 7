@@ -1,0 +1,49 @@
+
+#1. Diamond 
+n = int(input("Enter n: "))
+for i in range(1, n + 1):
+    print(" " * (n - i) + "*" * (2 * i - 1))
+for i in range(n - 1, 0, -1):
+    print(" " * (n - i) + "*" * (2 * i - 1))
+
+#2. Hollow Pyramid
+n = int(input("Enter n: "))
+for i in range(1, n + 1):
+    if i == n:
+        print("*" * (2 * n - 1))
+    else:
+        print(" " * (n - i), end="")
+        print("*", end="")
+        if i > 1:
+            print(" " * (2 * i - 3), end="")
+            print("*")
+        else:
+            print()
+
+#3. Arrow
+
+n = int(input("Enter number of rows: "))
+for i in range(1, n + 1):
+    print(" " * (n - i) + "*" * i)
+for i in range(n - 1, 0, -1):
+    print(" " * (n - i) + "*" * i)
+
+#4.  Diamond
+n = int(input("Enter n: "))
+for i in range(1, n + 1):
+    print(" " * (n - i), end="")
+    print("*", end="")
+    if i > 1:
+        print(" " * (2 * i - 3), end="")
+        print("*")
+    else:
+        print()
+for i in range(n - 1, 0, -1):
+    print(" " * (n - i), end="")
+    print("*", end="")
+    if i > 1:
+        print(" " * (2 * i - 3), end="")
+        print("*")
+    else:
+        print()
+
