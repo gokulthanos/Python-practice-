@@ -1,0 +1,26 @@
+def check(str):
+    v="aeiouAEIOU"
+    v1=0
+    d1=0
+    c=0
+    s=0
+    d={}
+    for i in range(len(str)):
+        if str[i] in v:
+            v1=v1+1
+        elif str[i].isalpha():
+
+            c=c+1
+        elif str[i].isdigit():
+            d1=d1+1
+        else :
+            s=s+1
+    c=v1-c
+    d["vowel"]=v1
+    d["cons"]=c
+    d["space"]=s
+    d["digit"]=d1
+    print(d)
+str=input("eneter the string:")
+check(str)
+    

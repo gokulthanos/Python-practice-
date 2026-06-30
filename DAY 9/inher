@@ -1,0 +1,13 @@
+class central_govt :
+    def central(self):
+        print("iam the main")
+class state_govt(central_govt):
+    def state (self):
+        print("iam under the central")
+class local(state_govt):
+    def pop(self):
+        print("iam under the both of them")
+g1=local()
+g1.pop()
+g1.state()
+g1.central()

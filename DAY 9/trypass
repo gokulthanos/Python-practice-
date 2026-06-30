@@ -1,0 +1,18 @@
+
+# try:
+#     n=int(input("enter the pass"))
+#     l=len(n)
+#     if n>=8:
+#         print("accept the pass")
+
+
+n=input("enter the pass : ")
+
+class passwardexpection(Exception):
+    pass
+try:
+    if len(n)<=8:
+        raise passwardexpection("pass invalid")
+except passwardexpection as p:
+    print(p)
+        

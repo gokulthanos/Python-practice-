@@ -1,0 +1,20 @@
+# arr=[1,2,3,4,3,2,3,6,7,5]
+# count=0
+# for i in range(len(arr)):
+#     for j in range(i+1,len(arr)):
+#         if (i== arr[j]):
+#             count=count+1
+#             print(i)
+# print(count)
+arr=[1,2,3,4,3,2,3,6,7,5]
+d={}
+for i in arr :
+    if i in d:
+        d[i]=d[i]+1
+    else :
+        d[i]=1
+c=0
+for keys,values in d.items():
+    if values>1:
+        c=c+1
+print(c)
