@@ -1,0 +1,10 @@
+a=[2,1,5,1,3,2]
+k=3
+wind_sum=sum(a[:k])
+max_sum=wind_sum
+windavg = sum(a[:k])/ k
+maxavg = windavg
+for i in range(k, len(a)):
+    windavg = (windavg*k + (a[i] - a[i-k])) / k
+    maxavg = max(maxavg, windavg)
+print(maxavg)

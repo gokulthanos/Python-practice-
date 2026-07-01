@@ -1,0 +1,8 @@
+a=[2,1,5,1,3,2]
+k=3
+windsum=+sum(a[:k])
+maxsum=windsum
+for i in range(k,len(a)):
+    windsum=windsum + a[i] - a[i-k]
+    maxsum=max(maxsum,windsum)
+print(maxsum)
